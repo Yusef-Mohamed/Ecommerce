@@ -225,6 +225,7 @@ nav .collapse a.on {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+  width: calc(100% - 100px);
 }
 .categor-card .text h6 {
   color: var(--dark);
