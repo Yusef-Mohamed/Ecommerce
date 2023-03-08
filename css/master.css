@@ -139,7 +139,9 @@ nav .collapse a {
 nav .collapse a.on {
   color: var(--gold);
 }
-
+nav .dropdown {
+  display: none;
+}
 /* Start Nav  */
 /* Start Categore */
 .categories {
@@ -427,6 +429,9 @@ nav .collapse a.on {
 }
 /* End Details page  */
 /* start cart page  */
+.cart .table-res {
+  overflow-x: scroll;
+}
 .cart tr {
   border-bottom: 15px solid #f5f5f5;
 }
