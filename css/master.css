@@ -430,7 +430,7 @@ nav .dropdown {
 /* End Details page  */
 /* start cart page  */
 .cart .table-res {
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .cart tr {
   border-bottom: 15px solid #f5f5f5;
@@ -453,3 +453,14 @@ nav .dropdown {
   cursor: pointer;
 }
 /* End cart page  */
+/* Start Chech out  /*/
+.form-group {
+  background-color: white;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+}
+/* Start Chech out / */
