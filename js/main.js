@@ -32,7 +32,7 @@ let productContainer = document.querySelectorAll(".product-container");
 if (productContainer.length > 0) {
   // Adding porducts to page func
   let addProduts = function (arrOfContainerEle) {
-    fetch("https://fakestoreapi.com/products")
+    fetch("../products.json")
       .then((res) => res.json())
       .then((json) => {
         for (i = 0; i < json.length; i++) {

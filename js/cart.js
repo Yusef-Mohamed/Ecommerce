@@ -1,5 +1,5 @@
 let addProduts = function (productContainer) {
-  fetch("https://fakestoreapi.com/products")
+  fetch("../products.json")
     .then((res) => res.json())
     .then((json) => {
       // The Cart
