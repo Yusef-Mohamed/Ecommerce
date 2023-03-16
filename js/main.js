@@ -89,8 +89,6 @@ if (productContainer.length > 0) {
 let cateEle = document.querySelectorAll(".categories-list div");
 cateEle.forEach((e) => {
   e.addEventListener("click", (ele) => {
-    window.sessionStorage.setItem("category", "asd");
-    // window.open("shop.html");
     if (ele.target.parentElement.dataset.categore) {
       window.sessionStorage.setItem(
         "category",
