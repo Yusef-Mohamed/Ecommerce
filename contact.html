@@ -28,7 +28,7 @@
             <li class="p-2"><a class="text-secondary" href="#">FAQs</a></li>
           </ul>
         </div>
-        <div class="col-lg-6 text-center text-lg-end">
+        <div class="col-lg-6 text-center text-lg-end p-0">
           <div class="dropdowns d-inline-flex">
             <div class="dropdown">
               <button
@@ -171,7 +171,7 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link on" href="Shop.html">Shop</a>
+              <a class="nav-link" href="Shop.html">Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="detail.html">Shop Detail</a>
@@ -183,7 +183,7 @@
               <a class="nav-link" href="checkout.html">Check Out</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link on" href="contact.html">Contact</a>
             </li>
           </ul>
           <div class="d-none d-lg-flex gap-2">
@@ -210,337 +210,75 @@
     </nav>
     <!-- End Nav Bar -->
     <!-- Start Contect  -->
-    <!-- Start SHop -->
-    <div class="container py-4">
+    <!-- Start cart -->
+    <div class="cart container py-4">
       <div class="sec-bar bg-white p-3">
-        <span class="pe-1">Home</span>/<span class="px-1">Shop</span>/<span
-          class="ps-1"
-          >Shop List</span
-        >
-        / <span class="cate-name"></span>
+        <span class="pe-1">Home</span>/<span class="px-1">Contact</span>
       </div>
+      <h2 class="sec-heading fw-bold text-uppercase py-5">
+        <span class="pe-3">CONTACT US </span>
+      </h2>
       <div class="row">
-        <div class="col-md-4 col-lg-3">
-          <div class="price-filter">
-            <h6 class="sec-heading text-uppercase py-3">
-              <span class="pe-3">FILTER BY PRICE</span>
-            </h6>
-            <div class="bg-white p-3">
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="price-all"
-                />
-                <label class="form-check-label ms-3" for="price-all">
-                  Price All
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="0-100"
-                />
-                <label class="form-check-label ms-3" for="0-100">
-                  $0 - $100
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="100-200"
-                />
-                <label class="form-check-label ms-3" for="100-200">
-                  $100 - $200
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="200-300"
-                />
-                <label class="form-check-label ms-3" for="200-300">
-                  $200 - $300
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="300-400"
-                />
-                <label class="form-check-label ms-3" for="300-400">
-                  $300 - $400
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="400-500"
-                />
-                <label class="form-check-label ms-3" for="400-500">
-                  $400 - $500
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
+        <div class="col-lg-7 bg-white p-4">
+          <form class="contact">
+            <div class="name">
+              <input type="text" class="my-3" placeholder="Your Name" />
+              <div class="text-danger">Please enter your name</div>
             </div>
-          </div>
-          <div class="color-filter py-3">
-            <h6 class="sec-heading text-uppercase py-3">
-              <span class="pe-3">FILTER BY COLOR</span>
-            </h6>
-            <div class="bg-white p-3">
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="color-all"
-                />
-                <label class="form-check-label ms-3" for="color-all">
-                  All Color
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="black"
-                />
-                <label class="form-check-label ms-3" for="black"> Black </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="white"
-                />
-                <label class="form-check-label ms-3" for="white"> White </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input mb-1" type="checkbox" id="red" />
-                <label class="form-check-label ms-3" for="red"> Red </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="blue"
-                />
-                <label class="form-check-label ms-3" for="blue"> Blue </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="green"
-                />
-                <label class="form-check-label ms-3" for="green"> Green </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
+            <div class="email">
+              <input type="text" class="my-3" placeholder="Your Email" />
+              <div class="text-danger">Please enter a vailed email</div>
             </div>
-          </div>
-          <div class="size-filter py-3">
-            <h6 class="sec-heading text-uppercase py-3">
-              <span class="pe-3">FILTER BY SIZE</span>
-            </h6>
-            <div class="bg-white p-3">
-              <div class="form-check d-flex align-items-center mb-2">
-                <input
-                  class="form-check-input mb-1"
-                  type="checkbox"
-                  id="size-all"
-                />
-                <label class="form-check-label ms-3" for="size-all">
-                  All Size
-                </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input mb-1" type="checkbox" id="xs" />
-                <label class="form-check-label ms-3" for="xs"> XS </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input mb-1" type="checkbox" id="s" />
-                <label class="form-check-label ms-3" for="s"> S </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input mb-1" type="checkbox" id="m" />
-                <label class="form-check-label ms-3" for="m"> M </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input mb-1" type="checkbox" id="l" />
-                <label class="form-check-label ms-3" for="l"> L </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
-              <div class="form-check d-flex align-items-center">
-                <input class="form-check-input mb-1" type="checkbox" id="xl" />
-                <label class="form-check-label ms-3" for="xl"> XL </label>
-                <span
-                  class="p-1 border d-block ms-auto"
-                  style="font-size: 12px"
-                >
-                  100</span
-                >
-              </div>
+            <div class="subject">
+              <input type="text" class="my-3" placeholder="Subject" />
+              <div class="text-danger">Please enter a subject</div>
             </div>
-          </div>
+            <div class="message">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="8"
+                class="my-3"
+                placeholder="Message"
+              ></textarea>
+              <div class="text-danger">Please enter a Message</div>
+            </div>
+            <input type="submit" value="Send Message" class="my-3" />
+          </form>
         </div>
-        <div class="shop col-md-8 col-lg-9">
-          <div class="d-flex justify-content-between align-items-center py-2">
-            <span
-              class="bg-white d-flex align-items-center justify-content-center"
-            >
-              <i class="fa-solid fa-bars t-ddark"></i>
-            </span>
-            <div>
-              <div class="dropdowns d-inline-flex">
-                <div class="dropdown">
-                  <button
-                    class="btn dropdown-toggle bg-white"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Sorting
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Latest</a></li>
-                    <li><a class="dropdown-item" href="#">Popluarty</a></li>
-                    <li><a class="dropdown-item" href="#">Best Ratin</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown ms-2">
-                  <button
-                    class="btn dropdown-toggle bg-white"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Showing
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">10</a></li>
-                    <li><a class="dropdown-item" href="#">20</a></li>
-                    <li><a class="dropdown-item" href="#">30</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div class="col-lg-5">
+          <div class="bg-white p-4 mb-4">
+            <iframe
+              style="width: 100%; height: 250px"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+              frameborder="0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
           </div>
-          <div class="row pt-4 products-shop"></div>
-          <div class="control text-center pb-5 pt-4">
-            <span class="border bg-white py-2 px-3"> Previous</span>
-            <a href="#" class="border py-2 px-3 active">1</a>
-            <a href="#" class="border py-2 px-3">2</a>
-            <a href="#" class="border py-2 px-3">3</a>
-            <a href="#" class="border py-2 px-3">Next</a>
+          <div class="bg-white p-4">
+            <div class="py-2">
+              <i class="fa-solid fa-location-dot t-gold fs-5 px-2"></i>
+
+              <span>123 Street, New York, USA </span>
+            </div>
+            <div class="py-2">
+              <i class="fa-solid fa-envelope t-gold fs-5 px-2"></i>
+
+              <span>info@example.com </span>
+            </div>
+            <div class="py-2">
+              <i class="fa-solid fa-phone t-gold fs-5 px-2"></i>
+
+              <span>+012 345 67890 </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End SHop -->
+    <!-- End cart -->
     <!-- Start Footer  -->
     <div class="footer bg-ddark t-white py-5">
       <div class="container">
@@ -715,7 +453,7 @@
     <!-- End Contect  -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/contact.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/shop.js"></script>
   </body>
 </html>

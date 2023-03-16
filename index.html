@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
     <link rel="stylesheet" href="css/master.css" />
     <title>Document</title>
   </head>
@@ -78,14 +77,14 @@
           <div class="d-inline-flex d-lg-none gap-2 ms-3 icon-top">
             <div class="d-flex align-items-center gap-2 icon-fav">
               <i class="fa-solid fa-heart t-ddark" style="font-size: 20px"></i>
-              <span class="badge rounded-circle">0</span>
+              <span class="badge rounded-circle fav-counter">0</span>
             </div>
             <div class="d-flex align-items-center gap-2 icon-shop">
               <i
                 class="fa fa-solid fa-cart-shopping t-ddark"
                 style="font-size: 20px"
               ></i>
-              <span class="badge rounded-circle">0</span>
+              <span class="badge rounded-circle cart-counter">0</span>
             </div>
           </div>
         </div>
@@ -117,7 +116,7 @@
           <div class="col-4">
             <div class="text-end">
               <span class="d-block">Programmer Number </span>
-              <span class="d-block num">+20 120 750 3648</span>
+              <span class="d-block t-ddark">+20 120 750 3648</span>
             </div>
           </div>
         </div>
@@ -184,14 +183,14 @@
               <a class="nav-link" href="checkout.html">Check Out</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
           <div class="d-none d-lg-flex gap-2">
             <div class="d-flex align-items-center gap-2 icon-fav">
               <i class="fa-solid fa-heart t-gold" style="font-size: 20px"></i>
               <span
-                class="badge text-secondary border border-white rounded-circle text-white"
+                class="badge text-secondary border border-white rounded-circle text-white fav-counter"
                 >0</span
               >
             </div>
@@ -201,7 +200,7 @@
                 style="font-size: 20px"
               ></i>
               <span
-                class="badge text-secondary border border-white rounded-circle text-white"
+                class="text-secondary border border-white rounded-circle text-white cart-counter"
                 >0</span
               >
             </div>
@@ -310,80 +309,53 @@
         <h2 class="sec-heading fw-bold text-uppercase">
           <span class="pe-3">categories</span>
         </h2>
-        <div class="row py-3">
+        <div class="row py-3 categories-list">
           <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
-              <div class="image">
-                <img src="img/cat-2.jpg" alt="" />
-              </div>
-              <div class="text px-3">
-                <h6 class="">Categore Name</h6>
-                <span class="fs-6">100 Products</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
+            <div
+              class="categor-card d-flex mb-4"
+              data-categore="men's clothing"
+            >
               <div class="image">
                 <img src="img/cat-3.jpg" alt="" />
               </div>
               <div class="text px-3">
-                <h6 class="">Categore Name</h6>
+                <h6 class="">men's clothing</h6>
                 <span class="fs-6">100 Products</span>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
+            <div class="categor-card d-flex mb-4" data-categore="jewelery">
+              <div class="image">
+                <img src="img/cat-4.jpg" alt="" />
+              </div>
+              <div class="text px-3">
+                <h6 class="">jewelery</h6>
+                <span class="fs-6">100 Products</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
+            <div class="categor-card d-flex mb-4" data-categore="electronics">
               <div class="image hover">
-                <img src="img/cat-4.jpg" alt="" />
-              </div>
-              <div class="text px-3">
-                <h6 class="">Categore Name</h6>
-                <span class="fs-6">100 Products</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
-              <div class="image">
                 <img src="img/cat-2.jpg" alt="" />
               </div>
               <div class="text px-3">
-                <h6 class="">Categore Name</h6>
+                <h6 class="">electronics</h6>
                 <span class="fs-6">100 Products</span>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
+            <div
+              class="categor-card d-flex mb-4"
+              data-categore="women's clothing"
+            >
               <div class="image">
                 <img src="img/cat-3.jpg" alt="" />
               </div>
               <div class="text px-3">
-                <h6 class="">Categore Name</h6>
-                <span class="fs-6">100 Products</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
-              <div class="image">
-                <img src="img/cat-4.jpg" alt="" />
-              </div>
-              <div class="text px-3">
-                <h6 class="">Categore Name</h6>
-                <span class="fs-6">100 Products</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 hover pb-1">
-            <div class="categor-card d-flex mb-4">
-              <div class="image">
-                <img src="img/cat-2.jpg" alt="" />
-              </div>
-              <div class="text px-3">
-                <h6 class="">Categore Name</h6>
+                <h6 class="">women's clothing</h6>
                 <span class="fs-6">100 Products</span>
               </div>
             </div>
@@ -398,232 +370,7 @@
         <h2 class="sec-heading fw-bold text-uppercase">
           <span class="pe-3">FEATURED PRODUCTS</span>
         </h2>
-        <div class="row pt-4">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-1.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-2.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-3.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-4.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-5.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-6.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-7.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-8.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row pt-4 product-container"></div>
       </div>
     </div>
     <!-- Start Feat Product  -->
@@ -675,232 +422,7 @@
         <h2 class="sec-heading fw-bold text-uppercase">
           <span class="pe-3">FEATURED PRODUCTS</span>
         </h2>
-        <div class="row pt-4">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-1.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-2.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-3.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-4.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-5.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-6.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-7.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card product mb-4" style="width: 100%">
-              <div class="overflow-hidden hover position-relative">
-                <div class="product-overlay">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-repeat"></i>
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <img src="img/product-8.jpg" class="card-img-top" alt="..." />
-              </div>
-              <div class="card-body text-center">
-                <h6 class="card-title t-ddark pt-2">Product Name Goes Here</h6>
-                <div class="price">
-                  <span class="t-ddark">$129</span>
-                  <del>$129</del>
-                </div>
-                <div class="rate">
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <i class="fa-solid fa-star t-gold"></i>
-                  <span class="fs-6">(99)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row pt-4 product-container"></div>
       </div>
     </div>
     <!-- Start rec Product  -->
@@ -1111,5 +633,6 @@
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
