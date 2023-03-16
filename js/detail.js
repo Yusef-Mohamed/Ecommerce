@@ -1,4 +1,4 @@
-fetch("../products.json")
+fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((json) => {
     for (i = 0; i < json.length; i++) {

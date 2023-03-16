@@ -3,17 +3,19 @@ document.querySelector(".cate-name").innerHTML =
 
 let productShop = document.querySelectorAll(".products-shop");
 let addProdutsShop = function (arrOfContainerEle) {
-  fetch("../products.json")
+  fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((json) => {
       for (i = 0; i < json.length; i++) {
         if (json[i].category == window.sessionStorage.getItem("category")) {
           for (e = 0; e < arrOfContainerEle.length; e++) {
             let favActive = "";
-            let favArr = JSON.parse(localStorage.getItem("favList"));
-            for (x = 0; x < favArr.length; x++) {
-              if (favArr[x].id == json[i].id) {
-                favActive = "on";
+            if (localStorage.getItem("favList")) {
+              let favArr = JSON.parse(localStorage.getItem("favList"));
+              for (x = 0; x < favArr.length; x++) {
+                if (favArr[x].id == json[i].id) {
+                  favActive = "on";
+                }
               }
             }
             let mainDiv = document.createElement("div");

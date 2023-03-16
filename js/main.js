@@ -32,16 +32,18 @@ let productContainer = document.querySelectorAll(".product-container");
 if (productContainer.length > 0) {
   // Adding porducts to page func
   let addProduts = function (arrOfContainerEle) {
-    fetch("../products.json")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => {
         for (i = 0; i < json.length; i++) {
           for (e = 0; e < arrOfContainerEle.length; e++) {
             let favActive = "";
-            let favArr = JSON.parse(localStorage.getItem("favList"));
-            for (x = 0; x < favArr.length; x++) {
-              if (favArr[x].id == json[i].id) {
-                favActive = "on";
+            if (localStorage.getItem("favList")) {
+              let favArr = JSON.parse(localStorage.getItem("favList"));
+              for (x = 0; x < favArr.length; x++) {
+                if (favArr[x].id == json[i].id) {
+                  favActive = "on";
+                }
               }
             }
             let mainDiv = document.createElement("div");
@@ -124,32 +126,31 @@ let shopingCartFun = function () {
   if (localStorage.getItem("cartArr")) {
     shopingCart = JSON.parse(localStorage.getItem("cartArr"));
   }
-  let shopingIcons = document.querySelectorAll(".shopping-add");
-
-  shopingIcons.forEach((e, index) => {
-    e.onclick = function () {
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("shopping-add")) {
       let newOne = true;
       for (i = 0; i < shopingCart.length; i++) {
-        if (shopingCart[i].id == e.dataset.id) {
+        if (shopingCart[i].id == e.target.dataset.id) {
           newOne = false;
         }
       }
       if (newOne) {
         shopingCart.push({
-          id: e.dataset.id,
+          id: e.target.dataset.id,
           amount: 1,
         });
       } else {
         for (i = 0; i < shopingCart.length; i++) {
-          if (shopingCart[i].id == e.dataset.id) {
+          if (shopingCart[i].id == e.target.dataset.id) {
             shopingCart[i].amount += 1;
           }
         }
       }
       localStorage.setItem("cartArr", JSON.stringify(shopingCart));
       cartNav();
-    };
+    }
   });
+
   // Add number of products in nav
 };
 let cartNav = function () {
@@ -169,7 +170,6 @@ let favListFun = function () {
   if (localStorage.getItem("favList")) {
     favList = JSON.parse(localStorage.getItem("favList"));
   }
-  console.log(favList);
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("fa-heart")) {
       e.target.classList.toggle("on");
@@ -189,5 +189,9 @@ let favListFun = function () {
   });
 };
 favListFun();
-cartNav();
-favNav();
+if (localStorage.getItem("cartArr")) {
+  cartNav();
+}
+if (localStorage.getItem("favList")) {
+  favNav();
+}
