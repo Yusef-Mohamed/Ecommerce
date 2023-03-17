@@ -100,7 +100,7 @@ cateEle.forEach((e) => {
         ele.target.parentElement.parentElement.dataset.categore
       );
     }
-    window.open("shop.html");
+    window.open("Shop.html");
   });
 });
 
