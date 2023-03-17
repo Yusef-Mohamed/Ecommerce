@@ -3,6 +3,15 @@ fetch("https://fakestoreapi.com/products")
   .then((json) => {
     for (i = 0; i < json.length; i++) {
       if (json[i].id == window.sessionStorage.getItem("product")) {
+        // Check if Product in Cart Arr
+        let amountOfPr = 0;
+        if (localStorage.getItem("cartArr")) {
+          JSON.parse(localStorage.getItem("cartArr")).forEach((e) => {
+            if (e.id == window.sessionStorage.getItem("product")) {
+              amountOfPr = e.amount;
+            }
+          });
+        }
         // add Photo Src
         document.querySelector(
           ".carousel-inner"
@@ -147,17 +156,17 @@ fetch("https://fakestoreapi.com/products")
         </div>
         <div class="cart-adder d-flex gap-3 py-4">
           <div class="num d-flex text-center align-items-center bg-grey">
-            <button>
-              <i class="fa-solid fa-minus"></i>
-            </button>
-            <span class="px-3">1</span>
-            <button>
-              <i class="fa-solid fa-plus"></i>
-            </button>
+            <span class="minus">
+              <i class="fa-solid fa-minus minus"></i>
+            </span>
+            <span class="px-3 num">${amountOfPr}</span>
+            <span class ="plus">
+              <i class="fa-solid fa-plus plus"></i>
+            </span>
           </div>
-          <div class="submit">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span>Add To Cart</span>
+          <div class="submit sub">
+            <i class="fa-solid fa-cart-shopping sub"></i>
+            <span class="sub">Add To Cart</span>
           </div>
         </div>
         <div class="share d-flex gap-3">
@@ -181,9 +190,62 @@ fetch("https://fakestoreapi.com/products")
       </div>`;
       }
     }
+    addProduts();
   });
 
+// Add To Cart From + -
+
+let addProduts = function () {
+  let plus = document.querySelector("fa-plus");
+  let minus = document.querySelector("fa-minus");
+  let num = document.querySelector("span.num");
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("plus")) {
+      num.innerHTML = +num.innerHTML + 1;
+    }
+    if (e.target.classList.contains("minus")) {
+      num.innerHTML = +num.innerHTML - 1;
+    }
+    if (e.target.classList.contains("sub")) {
+      // ============================================
+      if (localStorage.getItem("cartArr")) {
+        let cartArr = JSON.parse(localStorage.getItem("cartArr"));
+        let isnew = true;
+        cartArr.forEach((el) => {
+          if (el.id == window.sessionStorage.getItem("product")) {
+            cartArr = cartArr.filter(
+              (ele) => ele.id != sessionStorage.getItem("product")
+            );
+            cartArr.push({
+              id: window.sessionStorage.getItem("product"),
+              amount: +num.innerHTML,
+            });
+            localStorage.setItem("cartArr", JSON.stringify(cartArr));
+            isnew = false;
+          }
+        });
+        if (isnew) {
+          cartArr.push({
+            id: sessionStorage.getItem("product"),
+            amount: +num.innerHTML,
+          });
+          localStorage.setItem("cartArr", JSON.stringify(cartArr));
+        }
+      } else {
+        localStorage.setItem(
+          "cartArr",
+          JSON.stringify([
+            { id: sessionStorage.getItem("product"), amount: +num.innerHTML },
+          ])
+        );
+      }
+      carttNav();
+    }
+  });
+};
+
 // products info
+
 let infoSpan = document.querySelectorAll(".info-bar span");
 let description = document.querySelector(".description");
 let Information = document.querySelector(".Information");
@@ -201,3 +263,10 @@ infoSpan.forEach((e, index) => {
     arrOfSub[index].classList.add("active");
   };
 });
+let carttNav = function () {
+  if (localStorage.getItem("cartArr")) {
+    let span = document.querySelectorAll(".cart-counter");
+    span[0].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
+    span[1].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
+  }
+};

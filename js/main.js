@@ -152,14 +152,18 @@ let shopingCartFun = function () {
   // Add number of products in nav
 };
 let cartNav = function () {
-  let span = document.querySelectorAll(".cart-counter");
-  span[0].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
-  span[1].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
+  if (localStorage.getItem("cartArr")) {
+    let span = document.querySelectorAll(".cart-counter");
+    span[0].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
+    span[1].innerHTML = JSON.parse(localStorage.getItem("cartArr")).length;
+  }
 };
 let favNav = function () {
-  let span = document.querySelectorAll(".fav-counter");
-  span[0].innerHTML = JSON.parse(localStorage.getItem("favList")).length;
-  span[1].innerHTML = JSON.parse(localStorage.getItem("favList")).length;
+  if (localStorage.getItem("favList")) {
+    let span = document.querySelectorAll(".fav-counter");
+    span[0].innerHTML = JSON.parse(localStorage.getItem("favList")).length;
+    span[1].innerHTML = JSON.parse(localStorage.getItem("favList")).length;
+  }
 };
 
 // Fav List

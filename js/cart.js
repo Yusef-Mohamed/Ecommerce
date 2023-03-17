@@ -25,13 +25,13 @@ let addProduts = function (productContainer) {
               <div
                 class="num mx-auto d-flex text-center align-items-center bg-grey"
               >
-                <button>
+                <span>
                   <i class="fa-solid fa-minus"></i>
-                </button>
+                </span>
                 <span class="px-2">${cartProduts[e].amount}</span>
-                <button>
+                <span>
                   <i class="fa-solid fa-plus"></i>
-                </button>
+                </span>
               </div>
               </td>
               <td class="align-middle final-price">$<span>${
